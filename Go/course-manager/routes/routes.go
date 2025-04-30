@@ -6,7 +6,7 @@ import (
 )
 
 func SetupRoutes(router *gin.Engine) {
-	// Curso routes
+
 	router.POST("/cursos", controllers.CriarCurso)
 	router.GET("/cursos", controllers.ListarCursos)
 	router.GET("/cursos/:id", controllers.BuscarCursoPorID)
@@ -14,7 +14,6 @@ func SetupRoutes(router *gin.Engine) {
 	router.DELETE("/cursos/:id", controllers.DeletarCurso)
 	router.GET("/cursos/:id/media", controllers.CalcularNotaMedia)
 
-	// Aluno routes
 	router.POST("/alunos", controllers.CriarAluno)
 	router.GET("/alunos", controllers.ListarAlunos)
 	router.GET("/alunos/:id", controllers.BuscarAlunoPorID)
@@ -22,7 +21,6 @@ func SetupRoutes(router *gin.Engine) {
 	router.DELETE("/alunos/:id", controllers.DeletarAluno)
 	router.GET("/alunos/:id/cursos", controllers.ListarCursosDoAluno)
 
-	// Matricula routes
 	router.POST("/matriculas", controllers.CriarMatricula)
 	router.GET("/matriculas", controllers.ListarMatriculas)
 	router.GET("/matriculas/:id", controllers.BuscarMatriculaPorID)
